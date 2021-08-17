@@ -12,7 +12,14 @@
       background: red;
       height: 500px;
       width: 500px;
-      /* display: none; */
+      display: none;
+      position: absolute;
+    }
+
+    #square-black {
+      background-color: black;
+      height: 500px;
+      width: 500px;
       position: absolute;
     }
   </style>
@@ -22,24 +29,22 @@
     <button id="stop">STOP</button>
 
     <div id="square"></div>
+    <div id="square-black"></div>
 
     <!-- <script src="./jquery/jquery-3.6.0.min.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <script>
-      
-      $("#button").click(() => {
-        $("#square").animate({
-          opacity: 0.6,
-          left: "1000",
-          top: "400",
-          height: "toggle"
+    
+    $("#button").click(() => {
+      $("#square-black").hide(2000, () => {
+        $("#square").show().animate({
+          left: "100vw",
+          opacity: 0.3,
         }, 3000)
       })
 
-      $("#stop").click(() => {
-        $("#square").stop()
-      })
+    })
 
     </script>
 
