@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jquery</title>
+</head>
+
+<body>
+  
+  <h1 class="titulo">Titulo</h1>
+
+  <h1 id="show" style="display: none">Não sai Agora</h1>
+  
+
+  <!-- <script src="./jquery/jquery-3.6.0.min.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script>
+
+    let jq = $.noConflict()
+
+    jq('.titulo').click(() => {
+     console.log('Cliquei no Titulo')
+   })
+   jq('.titulo').mouseenter((event) => {
+      const {clientY} = event
+      const {clientX} = event
+
+      console.log(clientY, clientX)
+
+   })
+   jq(document).mouseleave(() => {
+      jq('#show').show()
+      console.log('Show')
+   })
+   jq(".titulo").dblclick(() => {
+      console.log('Double Click');
+   })
+
+  </script>
+  
+
+
+</body>
+</html>
