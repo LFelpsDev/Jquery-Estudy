@@ -12,12 +12,14 @@
       background: red;
       height: 500px;
       width: 500px;
-      display: none;
+      /* display: none; */
+      position: absolute;
     }
   </style>
 
   <body>
     <button id="button">Fade In</button>
+    <button id="stop">STOP</button>
 
     <div id="square"></div>
 
@@ -26,12 +28,18 @@
 
     <script>
       
-      let Jquery = $.noConflict()
-
-      Jquery("#button").click(() => {
-        Jquery("#square").fadeTo(2000, 0.6) // ele Recebe como Parâmetro a duração e quantidade de opacidade, ele funciona como findIn e o findout
+      $("#button").click(() => {
+        $("#square").animate({
+          opacity: 0.6,
+          left: "1000",
+          top: "400",
+          height: "toggle"
+        }, 3000)
       })
-      
+
+      $("#stop").click(() => {
+        $("#square").stop()
+      })
 
     </script>
 
