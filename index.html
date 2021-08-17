@@ -1,47 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jquery</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jquery</title>
+  </head>
 
-<body>
-  
-  <h1 class="titulo">Titulo</h1>
+  <style>
+    #square {
+      background: red;
+      height: 500px;
+      width: 500px;
+      display: none;
+    }
+  </style>
 
-  <h1 id="show" style="display: none">Não sai Agora</h1>
-  
+  <body>
+    <button id="button">Fade In</button>
 
-  <!-- <script src="./jquery/jquery-3.6.0.min.js"></script> -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <div id="square"></div>
 
-  <script>
+    <!-- <script src="./jquery/jquery-3.6.0.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    let jq = $.noConflict()
+    <script>
+      
+      let Jquery = $.noConflict()
 
-    jq('.titulo').click(() => {
-     console.log('Cliquei no Titulo')
-   })
-   jq('.titulo').mouseenter((event) => {
-      const {clientY} = event
-      const {clientX} = event
+      Jquery("#button").click(() => {
+        Jquery("#square").fadeTo(2000, 0.6) // ele Recebe como Parâmetro a duração e quantidade de opacidade, ele funciona como findIn e o findout
+      })
+      
 
-      console.log(clientY, clientX)
+    </script>
 
-   })
-   jq(document).mouseleave(() => {
-      jq('#show').show()
-      console.log('Show')
-   })
-   jq(".titulo").dblclick(() => {
-      console.log('Double Click');
-   })
-
-  </script>
-  
-
-
-</body>
+  </body>
 </html>
