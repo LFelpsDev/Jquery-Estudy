@@ -3,50 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
     <title>Jquery</title>
   </head>
 
   <style>
-    #square {
-      background: red;
-      height: 500px;
-      width: 500px;
-      display: none;
-      position: absolute;
-    }
 
-    #square-black {
-      background-color: black;
-      height: 500px;
-      width: 500px;
-      position: absolute;
-    }
   </style>
 
   <body>
-    <button id="button">Fade In</button>
-    <button id="stop">STOP</button>
 
-    <div id="square"></div>
-    <div id="square-black"></div>
+    <h1>Minha Lista 1</h1>
+    <ul id="lista1">
+      <li class="item1">item 1</li>
+      <li class="item2">item 2</li>
+      <li class="item3">item 3</li>
+      <li class="item4">item 4</li>
+      <li class="item5">item 5</li>
+    </ul>
+
+    <h1>Minha Lista 2</h1>
+    <ul id="lista2">
+      <li class="item1">item 1</li>
+      <li class="item2">item 2</li>
+      <li class="item3">item 3</li>
+      <li class="item4">item 4</li>
+      <li class="item5">item 5</li>
+    </ul>
 
     <!-- <script src="./jquery/jquery-3.6.0.min.js"></script> -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <script>
-    
-    $("#button").click(() => {
-      $("#square-black").hide(2000, () => {
-        $("#square").show().animate({
-          left: "100vw",
-          opacity: 0.3,
-        }, 3000)
-      })
 
-    })
-
-    </script>
+  <script src="script.js"></script>
 
   </body>
 </html>
