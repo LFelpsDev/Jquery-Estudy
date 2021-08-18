@@ -1,3 +1,3 @@
-let jq = $("#lista1");
+let jq = $;
 
-console.log(jq)
+console.log(jq("#lista1").text())
