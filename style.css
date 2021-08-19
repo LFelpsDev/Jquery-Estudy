@@ -1,0 +1,15 @@
+
+.item {
+  list-style: none;
+  padding: 15px;
+  background: gray;
+  color: white;
+  margin-bottom: 8px;
+  display: block;
+  width: 80px;
+  text-align: center;
+}
+
+#lista1 {
+  margin-bottom: 40px;
+}
